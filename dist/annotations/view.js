@@ -10,7 +10,7 @@ var _utilAnnotate = require('../util/annotate');
 
 var _utilAnnotate2 = _interopRequireDefault(_utilAnnotate);
 
-var Template = function Template() {
+var View = function View() {
 	var options = arguments[0] === undefined ? {} : arguments[0];
 	return function (t) {
 		(0, _utilAnnotate2['default'])(t, '$component');
@@ -22,11 +22,11 @@ var Template = function Template() {
 			delete t.$component.template;
 		}
 
-		if (options.url) {
-			t.$component.templateUrl = options.url;
-		} else if (options.inline) {
-			t.$component.template = options.inline;
+		if (options.templateUrl) {
+			t.$component.templateUrl = options.templateUrl;
+		} else if (options.template) {
+			t.$component.template = options.template;
 		}
 	};
 };
-exports.Template = Template;
+exports.View = View;
