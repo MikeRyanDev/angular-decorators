@@ -1,6 +1,6 @@
 import annotate from '../util/annotate';
 
-export const Template = ( options = {} ) => t => {
+export const View = ( options = {} ) => t => {
 	annotate(t, '$component');
 
 	if(t.$component.templateUrl)
@@ -12,12 +12,12 @@ export const Template = ( options = {} ) => t => {
 		delete t.$component.template;
 	}
 
-	if(options.url)
+	if(options.templateUrl)
 	{
-		t.$component.templateUrl = options.url;
+		t.$component.templateUrl = options.templateUrl;
 	}
-	else if(options.inline)
+	else if(options.template)
 	{
-		t.$component.template = options.inline;
+		t.$component.template = options.template;
 	}
 }

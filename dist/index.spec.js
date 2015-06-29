@@ -33,8 +33,8 @@ describe('Angular Decorators', function () {
 	it('should export Service', function () {
 		return _index.Service.should.be.defined;
 	});
-	it('should export Template', function () {
-		return _index.Template.should.be.defined;
+	it('should export View', function () {
+		return _index.View.should.be.defined;
 	});
 	it('should export Transclude', function () {
 		return _index.Transclude.should.be.defined;

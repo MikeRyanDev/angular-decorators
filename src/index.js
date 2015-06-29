@@ -6,7 +6,7 @@ import { Inject } from './annotations/inject';
 import { Provider } from './annotations/provider';
 import { Require } from './annotations/require';
 import { Service } from './annotations/service';
-import { Template } from './annotations/template';
+import { View } from './annotations/view';
 import { Transclude } from './annotations/transclude';
 import { Module } from './module/module';
 
@@ -19,7 +19,7 @@ export {
 	Provider,
 	Require,
 	Service,
-	Template,
+	View,
 	Transclude,
 	Module
 };

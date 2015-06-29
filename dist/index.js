@@ -20,7 +20,7 @@ var _annotationsRequire = require('./annotations/require');
 
 var _annotationsService = require('./annotations/service');
 
-var _annotationsTemplate = require('./annotations/template');
+var _annotationsView = require('./annotations/view');
 
 var _annotationsTransclude = require('./annotations/transclude');
 
@@ -34,6 +34,6 @@ exports.Inject = _annotationsInject.Inject;
 exports.Provider = _annotationsProvider.Provider;
 exports.Require = _annotationsRequire.Require;
 exports.Service = _annotationsService.Service;
-exports.Template = _annotationsTemplate.Template;
+exports.View = _annotationsView.View;
 exports.Transclude = _annotationsTransclude.Transclude;
 exports.Module = _moduleModule.Module;
