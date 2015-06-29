@@ -90,7 +90,7 @@ let myModule = Module('my-component-module', []);
 	controllerAs : 'vm',
 	bind : { 'myAttrA' : '=', 'myAttrB' : '&' }
 })
-@Template({ url : '/path/to/template.html' })
+@View({ templateUrl : '/path/to/template.html' })
 @Require('requiredComponent')
 @Inject('$element', '$attrs')
 class MyComponentCtrl{
