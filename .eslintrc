@@ -10,12 +10,10 @@
 		"no-underscore-dangle" : 0,
 		"no-unused-vars" : [2, {
 			"args" : "none"
-		}]
-	},
-	"globals" : {
-		"window" : false,
-		"mina" : false,
-		"protractor" : false,
-		"require" : false
+			}]
+		},
+		"globals" : {
+			"window" : false,
+			"require" : false
+		}
 	}
-}

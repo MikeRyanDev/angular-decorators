@@ -1,7 +1,6 @@
 import Module from '../module';
 import {componentWriter} from '../writers';
 import parseProperties from './parse-properties';
-import extend from 'extend';
 
 export default function(config, t){
 	// Support for legacy angular-decorators bind config
@@ -16,7 +15,7 @@ export default function(config, t){
 
 		if(scope && typeof scope === 'object')
 		{
-			componentWriter.set('scope', extend(scope, config.scope), t);
+			componentWriter.set('scope', {...scope, ...config.scope}, t);
 		}
 		else
 		{
@@ -32,7 +31,7 @@ export default function(config, t){
 
 		if(previous && typeof previous === 'object')
 		{
-			componentWriter.set('bindToController', extend(previous, binders), t);
+			componentWriter.set('bindToController', {...previous, ...binders}, t);
 		}
 		else
 		{
