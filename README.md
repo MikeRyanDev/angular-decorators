@@ -410,7 +410,7 @@ export default Module('my-animation', [ngAnimate]).add(MyAnimation);
 ```
 
 
-## Extending angular-decrators
+## Extending angular-decorators
 #### Adding Your Own Providers
 You can register your own providers using `Module.addProvider`. For instance, if you want to add a new decorator called `@RouteableComponent` that hooked up a component to the upcoming router, you would start by creating a decorator that set a provider name and type on a class:
 
