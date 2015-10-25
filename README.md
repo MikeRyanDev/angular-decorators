@@ -2,6 +2,8 @@
 
 angular-decorators is a library of ES7 decorators for writing Angular 2 style code in AngularJS.
 
+**Notice:** While angular-decorators is stable and ready for production, it will not be receiving new feature development. In the future, this project will be deprecated in favor of the community fork of angular-decorators called [ng-forward](https://www.github.com/ngUpgraders/ng-forward). For more information on this project, checkout [this talk by Pete Bacon Darwin](https://www.youtube.com/watch?v=uXvNDcnLnwU).
+
 **Installation via npm**
 
 `npm install angular-decorators --save`
