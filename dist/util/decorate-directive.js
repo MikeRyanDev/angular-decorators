@@ -4,6 +4,8 @@ Object.defineProperty(exports, '__esModule', {
 	value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
@@ -18,10 +20,6 @@ var _parseProperties = require('./parse-properties');
 
 var _parseProperties2 = _interopRequireDefault(_parseProperties);
 
-var _extend = require('extend');
-
-var _extend2 = _interopRequireDefault(_extend);
-
 exports['default'] = function (config, t) {
 	// Support for legacy angular-decorators bind config
 	if (config.bind) {
@@ -34,7 +32,7 @@ exports['default'] = function (config, t) {
 		var scope = _writers.componentWriter.get('scope', t);
 
 		if (scope && typeof scope === 'object') {
-			_writers.componentWriter.set('scope', (0, _extend2['default'])(scope, config.scope), t);
+			_writers.componentWriter.set('scope', _extends({}, scope, config.scope), t);
 		} else {
 			_writers.componentWriter.set('scope', config.scope, t);
 		}
@@ -46,7 +44,7 @@ exports['default'] = function (config, t) {
 		var previous = _writers.componentWriter.get('bindToController', t);
 
 		if (previous && typeof previous === 'object') {
-			_writers.componentWriter.set('bindToController', (0, _extend2['default'])(previous, binders), t);
+			_writers.componentWriter.set('bindToController', _extends({}, previous, binders), t);
 		} else {
 			_writers.componentWriter.set('bindToController', (0, _parseProperties2['default'])(config.properties), t);
 		}

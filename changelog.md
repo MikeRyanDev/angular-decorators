@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.2.0
+* Added experimental typings file for TypeScript support
+* Added publishing for bower
+
 ## v1.1.0
 Added `constant` and `value` aliases to to Module:
 
